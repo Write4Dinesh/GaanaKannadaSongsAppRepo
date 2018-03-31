@@ -7,23 +7,23 @@ import android.content.SharedPreferences;
  * Created by shrinvigroup on 27/03/2018.
  */
 
-public class KNADataStore {
+public class KOSDataStore {
     private static final String MY_PREFS_NAME = "kna_preference_file";
-    private static KNADataStore instance;
+    private static KOSDataStore instance;
     private static Context mAppContext;
     private SharedPreferences mSharedPrefs;
     private SharedPreferences.Editor mEditor;
 
     private static final String LAST_AD_SHOW_TIME_IN_MILLIS = "last_ad_show_time_in_millis";
 
-    private KNADataStore() {
+    private KOSDataStore() {
         mSharedPrefs = mAppContext.getSharedPreferences(MY_PREFS_NAME, Context.MODE_PRIVATE);
     }
 
-    public static synchronized KNADataStore getInstance(Context appContext) {
+    public static synchronized KOSDataStore getInstance(Context appContext) {
         mAppContext = appContext.getApplicationContext();
         if (instance == null) {
-            instance = new KNADataStore();
+            instance = new KOSDataStore();
         }
         return instance;
     }

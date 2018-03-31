@@ -4,18 +4,18 @@ import android.app.Application;
 
 import com.onesignal.OSNotificationOpenResult;
 import com.onesignal.OneSignal;
-import com.shrinvi.kannadaoldsongs.analytics.KNAGoogleAnalytics;
+import com.shrinvi.kannadaoldsongs.analytics.KOSGoogleAnalytics;
 
 /**
  * Created by shrinvigroup on 25/03/2018.
  */
 
-public class KNAApplication extends Application {
+public class KOSApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        KNAUtils.configLocale(this);
-        KNAGoogleAnalytics.init(this);
+        KOSUtils.configLocale(this);
+        KOSGoogleAnalytics.init(this);
         // OneSignal Initialization
         OneSignal.startInit(this)
                 .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.InAppAlert).setNotificationOpenedHandler(new ExampleNotificationOpenedHandler())

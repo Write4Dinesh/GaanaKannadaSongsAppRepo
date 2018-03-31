@@ -7,11 +7,11 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.google.android.gms.ads.MobileAds;
-import com.shrinvi.kannadaoldsongs.analytics.KNAGoogleAnalytics;
-import com.shrinvi.kannadaoldsongs.model.KNAUtils;
+import com.shrinvi.kannadaoldsongs.analytics.KOSGoogleAnalytics;
+import com.shrinvi.kannadaoldsongs.model.KOSUtils;
 import com.shrinvi.kannadaoldsongs.R;
 
-public class KNASplashActivity extends KNASuperActivity {
+public class KOSSplashActivity extends KOSSuperActivity {
     public static final long LOAD_ANIMATION_DELAY_IN_MILLIS = 2 * 1000;
 
     @Override
@@ -20,7 +20,7 @@ public class KNASplashActivity extends KNASuperActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        KNAUtils.configLocale(this);
+        KOSUtils.configLocale(this);
         setContentView(R.layout.activity_splash);
         ImageView loadingIv = findViewById(R.id.splash_image_view);
         loadingIv.postDelayed(new Runnable() {
@@ -35,11 +35,11 @@ public class KNASplashActivity extends KNASuperActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        KNAGoogleAnalytics.sendScreenViewEvent("Splash Screen");
+        KOSGoogleAnalytics.sendScreenViewEvent("Splash Screen");
     }
 
     private void launchHomeScreen() {
-        Intent homeIntent = new Intent(this, KNAHomeActivity.class);
+        Intent homeIntent = new Intent(this, KOSHomeActivity.class);
         startActivity(homeIntent);
         finish();
     }

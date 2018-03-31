@@ -8,14 +8,14 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
-import com.shrinvi.kannadaoldsongs.analytics.KNAGoogleAnalytics;
-import com.shrinvi.kannadaoldsongs.model.KNAConstants;
-import com.shrinvi.kannadaoldsongs.model.KNAUtils;
-import com.shrinvi.kannadaoldsongs.model.KNAWebViewClient;
-import com.shrinvi.kannadaoldsongs.storage.KNADataStore;
+import com.shrinvi.kannadaoldsongs.analytics.KOSGoogleAnalytics;
+import com.shrinvi.kannadaoldsongs.model.KOSConstants;
+import com.shrinvi.kannadaoldsongs.model.KOSUtils;
+import com.shrinvi.kannadaoldsongs.model.KOSWebViewClient;
+import com.shrinvi.kannadaoldsongs.storage.KOSDataStore;
 import com.shrinvi.kannadaoldsongs.R;
 
-public class KNABrowserActivity extends KNASuperActivity {
+public class KOSBrowserActivity extends KOSSuperActivity {
     private WebView mKNAWebView;
     private InterstitialAd interstitialAd;
 
@@ -23,7 +23,7 @@ public class KNABrowserActivity extends KNASuperActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browser);
-        KNAUtils.configLocale(this);
+        KOSUtils.configLocale(this);
         mKNAWebView = findViewById(R.id.kna_webview);
         mKNAWebView.getSettings().setAllowContentAccess(true);
         mKNAWebView.getSettings().setJavaScriptEnabled(true);
@@ -34,10 +34,10 @@ public class KNABrowserActivity extends KNASuperActivity {
         mKNAWebView.getSettings().setDomStorageEnabled(true);
         mKNAWebView.getSettings().setSupportMultipleWindows(true);
 
-        mKNAWebView.setWebViewClient(new KNAWebViewClient((ProgressBar) findViewById(R.id.progress_spinner)));
+        mKNAWebView.setWebViewClient(new KOSWebViewClient((ProgressBar) findViewById(R.id.progress_spinner)));
 
-        String url = getIntent().getStringExtra(KNAConstants.INTENT_EXTRA_URL);
-        String title = getIntent().getStringExtra(KNAConstants.INTENT_EXTRA_TITLE);
+        String url = getIntent().getStringExtra(KOSConstants.INTENT_EXTRA_URL);
+        String title = getIntent().getStringExtra(KOSConstants.INTENT_EXTRA_TITLE);
         if (title != null && !title.isEmpty()) {
             getSupportActionBar().setTitle(title);
         }
@@ -74,7 +74,7 @@ public class KNABrowserActivity extends KNASuperActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        KNAGoogleAnalytics.sendScreenViewEvent("Browser Screen");
+        KOSGoogleAnalytics.sendScreenViewEvent("Browser Screen");
     }
 
     private void initBannerAd() {
@@ -84,13 +84,13 @@ public class KNABrowserActivity extends KNASuperActivity {
     }
 
     private void showInterstitialAd() {
-        long timeElapsedInMillis = System.currentTimeMillis() - KNADataStore.getInstance(this).getLastAddShowedTime();
+        long timeElapsedInMillis = System.currentTimeMillis() - KOSDataStore.getInstance(this).getLastAddShowedTime();
         if (interstitialAd != null && interstitialAd.isLoaded() && (timeElapsedInMillis > 60 * 1000)) {
-            KNAGoogleAnalytics.sendCustomEvent("AdMob", "ShowInterstitial");
+            KOSGoogleAnalytics.sendCustomEvent("AdMob", "ShowInterstitial");
             interstitialAd.show();
-            KNADataStore.getInstance(this).storeLastAddShowedTime(System.currentTimeMillis());
+            KOSDataStore.getInstance(this).storeLastAddShowedTime(System.currentTimeMillis());
         } else {
-            KNAGoogleAnalytics.sendCustomEvent("AdMob", "ShowInterstitial:not loaded yet");
+            KOSGoogleAnalytics.sendCustomEvent("AdMob", "ShowInterstitial:not loaded yet");
             finish();
 
         }

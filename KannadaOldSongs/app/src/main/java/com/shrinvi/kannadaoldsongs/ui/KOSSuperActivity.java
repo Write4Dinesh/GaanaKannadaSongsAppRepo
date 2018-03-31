@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.shrinvi.kannadaoldsongs.R;
 
-public class KNASuperActivity extends AppCompatActivity {
+public class KOSSuperActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

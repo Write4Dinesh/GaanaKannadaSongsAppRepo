@@ -15,10 +15,10 @@ import android.widget.ProgressBar;
  * Created by shrinvigroup on 24/03/2018.
  */
 
-public class KNAWebViewClient extends WebViewClient {
+public class KOSWebViewClient extends WebViewClient {
     private ProgressBar mProgressSpinner;
 
-    public KNAWebViewClient(ProgressBar progressSpinner) {
+    public KOSWebViewClient(ProgressBar progressSpinner) {
         mProgressSpinner = progressSpinner;
     }
 

@@ -12,20 +12,20 @@ import android.view.MenuItem;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.shrinvi.kannadaoldsongs.analytics.KNAGoogleAnalytics;
-import com.shrinvi.kannadaoldsongs.model.DataProvider;
-import com.shrinvi.kannadaoldsongs.model.KNANewsPaperAdapter;
-import com.shrinvi.kannadaoldsongs.model.KNAUtils;
+import com.shrinvi.kannadaoldsongs.analytics.KOSGoogleAnalytics;
+import com.shrinvi.kannadaoldsongs.model.KOSDataProvider;
+import com.shrinvi.kannadaoldsongs.model.KOSNewsPaperAdapter;
+import com.shrinvi.kannadaoldsongs.model.KOSUtils;
 import com.shrinvi.kannadaoldsongs.R;
 
-public class KNAHomeActivity extends KNASuperActivity {
+public class KOSHomeActivity extends KOSSuperActivity {
     private AlertDialog mAlertDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        KNAUtils.configLocale(this);
+        KOSUtils.configLocale(this);
         AdView adView = findViewById(R.id.home_adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
@@ -34,14 +34,14 @@ public class KNAHomeActivity extends KNASuperActivity {
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
 
         recyclerView.setLayoutManager(mLayoutManager);
-        KNANewsPaperAdapter adapter = new KNANewsPaperAdapter(DataProvider.getNewsPapers(this), this);
+        KOSNewsPaperAdapter adapter = new KOSNewsPaperAdapter(KOSDataProvider.getNewsPapers(this), this);
         recyclerView.setAdapter(adapter);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        KNAGoogleAnalytics.sendScreenViewEvent("Home Screen");
+        KOSGoogleAnalytics.sendScreenViewEvent("Home Screen");
     }
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -53,12 +53,12 @@ public class KNAHomeActivity extends KNASuperActivity {
 
         switch (item.getItemId()) {
             case R.id.rate_the_app:
-                KNAGoogleAnalytics.sendScreenViewEvent("Rate the App Screen");
+                KOSGoogleAnalytics.sendScreenViewEvent("Rate the App Screen");
               launchPlayStore();
                 return true;
             case R.id.about:
-                KNAGoogleAnalytics.sendScreenViewEvent("About Us Screen");
-                KNAUtils.showDialog(this, getString(R.string.about_us), getString(R.string.alert_button_label));
+                KOSGoogleAnalytics.sendScreenViewEvent("About Us Screen");
+                KOSUtils.showDialog(this, getString(R.string.about_us), getString(R.string.alert_button_label));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

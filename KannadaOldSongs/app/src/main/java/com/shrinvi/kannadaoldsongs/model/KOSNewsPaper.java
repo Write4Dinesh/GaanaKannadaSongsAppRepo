@@ -5,12 +5,12 @@ import java.io.Serializable;
 /**
  * Created by dinesh.k.masthaiah on 23-03-2016.
  */
-public class KNANewsPaper implements Serializable {
+public class KOSNewsPaper implements Serializable {
     private String mName;
     private String mUrl;
     private int mIconId;
 
-    public KNANewsPaper(String name, int iconId, String url) {
+    public KOSNewsPaper(String name, int iconId, String url) {
         mName = name;
         mUrl = url;
         mIconId = iconId;

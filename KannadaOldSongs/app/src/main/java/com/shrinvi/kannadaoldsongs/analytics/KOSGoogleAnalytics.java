@@ -10,7 +10,7 @@ import com.google.android.gms.analytics.Tracker;
  * Created by shrinvigroup on 25/03/2018.
  */
 
-public class KNAGoogleAnalytics {
+public class KOSGoogleAnalytics {
     private static final String GA_TRACKER_ID = "UA-116368779-1";
     private static Tracker mTracker;
 

@@ -9,19 +9,19 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.shrinvi.kannadaoldsongs.analytics.KNAGoogleAnalytics;
-import com.shrinvi.kannadaoldsongs.analytics.KNAGAEventsData;
+import com.shrinvi.kannadaoldsongs.analytics.KOSGoogleAnalytics;
+import com.shrinvi.kannadaoldsongs.analytics.KOSGAEventsData;
 import com.shrinvi.kannadaoldsongs.R;
-import com.shrinvi.kannadaoldsongs.ui.KNABrowserActivity;
+import com.shrinvi.kannadaoldsongs.ui.KOSBrowserActivity;
 
 import java.util.List;
 
-public class KNANewsPaperAdapter extends RecyclerView.Adapter<KNANewsPaperAdapter.NewsViewHolder> {
+public class KOSNewsPaperAdapter extends RecyclerView.Adapter<KOSNewsPaperAdapter.NewsViewHolder> {
 
-    private List<KNANewsPaper> mNewsPapers;
+    private List<KOSNewsPaper> mNewsPapers;
     private Context mContext;
 
-    public KNANewsPaperAdapter(List<KNANewsPaper> newsPapers, Context context) {
+    public KOSNewsPaperAdapter(List<KOSNewsPaper> newsPapers, Context context) {
         this.mNewsPapers = newsPapers;
         mContext = context;
     }
@@ -35,26 +35,26 @@ public class KNANewsPaperAdapter extends RecyclerView.Adapter<KNANewsPaperAdapte
 
     @Override
     public void onBindViewHolder(NewsViewHolder holder, int position) {
-        final KNANewsPaper currentNewsPaper = mNewsPapers.get(position);
+        final KOSNewsPaper currentNewsPaper = mNewsPapers.get(position);
         holder.mNameTv.setText(currentNewsPaper.getName());
         holder.mIconIv.setImageResource(currentNewsPaper.getIconId());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (KNAUtils.isConnected(mContext)) {
+                if (KOSUtils.isConnected(mContext)) {
                     launchBrowser(currentNewsPaper.getName(), currentNewsPaper.getUrl());
                 } else {
-                    KNAUtils.showDialog(mContext, mContext.getString(R.string.error_not_connected), mContext.getString(R.string.alert_button_label));
+                    KOSUtils.showDialog(mContext, mContext.getString(R.string.error_not_connected), mContext.getString(R.string.alert_button_label));
                 }
             }
         });
     }
 
     private void launchBrowser(String title, String url) {
-        KNAGoogleAnalytics.sendCustomEvent(KNAGAEventsData.CUSTOM_EVENT_CATEGORY_LAUNCH_NEWS, title);
-        Intent browserIntent = new Intent(mContext, KNABrowserActivity.class);
-        browserIntent.putExtra(KNAConstants.INTENT_EXTRA_URL, url);
-        browserIntent.putExtra(KNAConstants.INTENT_EXTRA_TITLE, title);
+        KOSGoogleAnalytics.sendCustomEvent(KOSGAEventsData.CUSTOM_EVENT_CATEGORY_LAUNCH_NEWS, title);
+        Intent browserIntent = new Intent(mContext, KOSBrowserActivity.class);
+        browserIntent.putExtra(KOSConstants.INTENT_EXTRA_URL, url);
+        browserIntent.putExtra(KOSConstants.INTENT_EXTRA_TITLE, title);
         mContext.startActivity(browserIntent);
     }
 

@@ -4,7 +4,7 @@ package com.shrinvi.kannadaoldsongs.model;
  * Created by shrinvigroup on 24/03/2018.
  */
 
-public class KNAConstants {
+public class KOSConstants {
     public static final String INTENT_EXTRA_URL = "intent_extra_url";
     public static final String INTENT_EXTRA_TITLE = "intent_extra_title";
     public static final String VK_URL = "https://vijaykarnataka.indiatimes.com/";

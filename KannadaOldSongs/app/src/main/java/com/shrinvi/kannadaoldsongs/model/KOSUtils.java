@@ -16,7 +16,7 @@ import java.util.Locale;
  * Created by shrinvigroup on 24/03/2018.
  */
 
-public class KNAUtils {
+public class KOSUtils {
     public static boolean isConnected(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
