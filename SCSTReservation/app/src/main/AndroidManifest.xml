@@ -8,9 +8,9 @@
     <application
         android:name=".model.KNAApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/kannada_news"
+        android:icon="@mipmap/dr_raj_app_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/kannada_news"
+        android:roundIcon="@mipmap/dr_raj_app_icon"
         android:supportsRtl="true"
         android:hardwareAccelerated="true"
         android:theme="@style/AppTheme">

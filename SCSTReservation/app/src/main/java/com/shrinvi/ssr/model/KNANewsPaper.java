@@ -8,10 +8,12 @@ import java.io.Serializable;
 public class KNANewsPaper implements Serializable {
     private String mName;
     private String mUrl;
+    private int mIconId;
 
-    public KNANewsPaper(String name, String url) {
+    public KNANewsPaper(String name, int iconId, String url) {
         mName = name;
         mUrl = url;
+        mIconId = iconId;
     }
 
     public String getName() {
@@ -26,8 +28,9 @@ public class KNANewsPaper implements Serializable {
         return mUrl;
     }
 
-    public void setUrl(String url) {
-        this.mUrl = url;
+    public int getIconId() {
+        return mIconId;
     }
+
 }
 
