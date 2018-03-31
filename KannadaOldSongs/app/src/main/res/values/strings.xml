@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Kannada Old Songs</string>
+    <string name="loading_label">Welcome proud kannadigas</string>
+    <string name="error_not_connected">No Network Connectivity</string>
+    <string name="alert_button_label">OK</string>
+
+    <!--admob related for test-->
+    <string name="test_ad_unit_id_for_home_banner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="test_ad_unit_id_for_browse_banner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="test_ad_unit_id_for_browse_interstitial">ca-app-pub-3940256099942544/1033173712</string>
+
+    <!--admob related for prod-->
+    <string name="ad_unit_id_for_home_banner">ca-app-pub-1188356255077818/5224405470</string>
+    <string name="ad_unit_id_for_browse_banner">ca-app-pub-1188356255077818/4251424522</string>
+    <string name="ad_unit_id_for_browse_interstitial">ca-app-pub-1188356255077818/3590284824</string>
+
+    <string name="admob_app_id">ca-app-pub-1188356255077818~4338699212</string>
+    <string name="about_us">This app is web based client of Gaana.com. Hence All rights reserved with Gaana.com. for terms of use and privacy
+    policy, please visit https\:\/\/gaana\.com/</string>
+
+    <string-array name="playlist_name">
+        <item>Kannada Retro Top 50</item>
+        <item>Kannada Romance Top 50</item>
+        <item>Kannada Top 50</item>
+        <item>Kannada Weekly Hot 20</item>
+    </string-array>
+    <string-array name="playlist_url">
+        <item>https://gaana.com/playlist/gaana-dj-kannada-retro-top-50</item>
+        <item>https://gaana.com/playlist/gaana-dj-kannada-romance-top-50</item>
+        <item>https://gaana.com/playlist/gaana-dj-kannada-top-20</item>
+        <item>https://gaana.com/playlist/gaana-dj-weekly-hot-20-kannada</item>
+    </string-array>
+</resources>
