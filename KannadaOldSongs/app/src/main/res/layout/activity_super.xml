@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.shrinvi.ssr.com.shrinvi.SSR.ui.KNASuperActivity">
+    tools:context="com.shrinvi.kannadaoldsongs.com.shrinvi.SSR.ui.KNASuperActivity">
 
 </android.support.constraint.ConstraintLayout>

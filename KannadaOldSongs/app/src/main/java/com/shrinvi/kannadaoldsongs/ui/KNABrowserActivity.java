@@ -1,4 +1,4 @@
-package com.shrinvi.ssr.ui;
+package com.shrinvi.kannadaoldsongs.ui;
 
 import android.os.Bundle;
 import android.webkit.WebView;
@@ -8,12 +8,12 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
-import com.shrinvi.ssr.analytics.KNAGoogleAnalytics;
-import com.shrinvi.ssr.model.KNAConstants;
-import com.shrinvi.ssr.model.KNAUtils;
-import com.shrinvi.ssr.storage.KNADataStore;
-import com.shrinvi.ssr.model.KNAWebViewClient;
-import com.shrinvi.ssr.R;
+import com.shrinvi.kannadaoldsongs.analytics.KNAGoogleAnalytics;
+import com.shrinvi.kannadaoldsongs.model.KNAConstants;
+import com.shrinvi.kannadaoldsongs.model.KNAUtils;
+import com.shrinvi.kannadaoldsongs.model.KNAWebViewClient;
+import com.shrinvi.kannadaoldsongs.storage.KNADataStore;
+import com.shrinvi.kannadaoldsongs.R;
 
 public class KNABrowserActivity extends KNASuperActivity {
     private WebView mKNAWebView;

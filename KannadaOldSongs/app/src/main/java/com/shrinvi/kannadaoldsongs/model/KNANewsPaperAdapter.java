@@ -1,4 +1,4 @@
-package com.shrinvi.ssr.model;
+package com.shrinvi.kannadaoldsongs.model;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,10 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.shrinvi.ssr.analytics.KNAGAEventsData;
-import com.shrinvi.ssr.analytics.KNAGoogleAnalytics;
-import com.shrinvi.ssr.R;
-import com.shrinvi.ssr.ui.KNABrowserActivity;
+import com.shrinvi.kannadaoldsongs.analytics.KNAGoogleAnalytics;
+import com.shrinvi.kannadaoldsongs.analytics.KNAGAEventsData;
+import com.shrinvi.kannadaoldsongs.R;
+import com.shrinvi.kannadaoldsongs.ui.KNABrowserActivity;
 
 import java.util.List;
 

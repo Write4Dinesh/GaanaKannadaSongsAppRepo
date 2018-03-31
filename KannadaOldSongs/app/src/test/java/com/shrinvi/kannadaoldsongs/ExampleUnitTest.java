@@ -1,4 +1,4 @@
-package com.shrinvi.ssr;
+package com.shrinvi.kannadaoldsongs;
 
 import org.junit.Test;
 

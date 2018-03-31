@@ -1,4 +1,4 @@
-package com.shrinvi.ssr;
+package com.shrinvi.kannadaoldsongs;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

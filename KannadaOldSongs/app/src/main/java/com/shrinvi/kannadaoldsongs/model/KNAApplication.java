@@ -1,10 +1,10 @@
-package com.shrinvi.ssr.model;
+package com.shrinvi.kannadaoldsongs.model;
 
 import android.app.Application;
 
 import com.onesignal.OSNotificationOpenResult;
 import com.onesignal.OneSignal;
-import com.shrinvi.ssr.analytics.KNAGoogleAnalytics;
+import com.shrinvi.kannadaoldsongs.analytics.KNAGoogleAnalytics;
 
 /**
  * Created by shrinvigroup on 25/03/2018.

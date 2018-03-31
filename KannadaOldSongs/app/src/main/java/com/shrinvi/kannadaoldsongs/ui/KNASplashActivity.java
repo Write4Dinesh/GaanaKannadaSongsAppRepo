@@ -1,4 +1,4 @@
-package com.shrinvi.ssr.ui;
+package com.shrinvi.kannadaoldsongs.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,9 +7,9 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.google.android.gms.ads.MobileAds;
-import com.shrinvi.ssr.analytics.KNAGoogleAnalytics;
-import com.shrinvi.ssr.model.KNAUtils;
-import com.shrinvi.ssr.R;
+import com.shrinvi.kannadaoldsongs.analytics.KNAGoogleAnalytics;
+import com.shrinvi.kannadaoldsongs.model.KNAUtils;
+import com.shrinvi.kannadaoldsongs.R;
 
 public class KNASplashActivity extends KNASuperActivity {
     public static final long LOAD_ANIMATION_DELAY_IN_MILLIS = 2 * 1000;

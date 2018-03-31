@@ -1,4 +1,4 @@
-package com.shrinvi.ssr.analytics;
+package com.shrinvi.kannadaoldsongs.analytics;
 
 import android.content.Context;
 

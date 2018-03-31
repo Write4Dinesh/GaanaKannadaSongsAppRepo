@@ -1,9 +1,9 @@
-package com.shrinvi.ssr.ui;
+package com.shrinvi.kannadaoldsongs.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.shrinvi.ssr.R;
+import com.shrinvi.kannadaoldsongs.R;
 
 public class KNASuperActivity extends AppCompatActivity {
 

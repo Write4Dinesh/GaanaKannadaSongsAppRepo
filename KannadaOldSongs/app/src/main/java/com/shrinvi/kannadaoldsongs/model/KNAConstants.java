@@ -1,4 +1,4 @@
-package com.shrinvi.ssr.model;
+package com.shrinvi.kannadaoldsongs.model;
 
 /**
  * Created by shrinvigroup on 24/03/2018.

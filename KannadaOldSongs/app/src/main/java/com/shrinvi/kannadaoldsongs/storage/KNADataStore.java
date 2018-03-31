@@ -1,4 +1,4 @@
-package com.shrinvi.ssr.storage;
+package com.shrinvi.kannadaoldsongs.storage;
 
 import android.content.Context;
 import android.content.SharedPreferences;

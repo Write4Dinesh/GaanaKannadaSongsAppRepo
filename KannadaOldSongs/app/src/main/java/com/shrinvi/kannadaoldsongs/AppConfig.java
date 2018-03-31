@@ -1,4 +1,4 @@
-package com.shrinvi.ssr;
+package com.shrinvi.kannadaoldsongs;
 
 /**
  * Created by shrinvigroup on 27/03/2018.

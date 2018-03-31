@@ -1,4 +1,4 @@
-package com.shrinvi.ssr.ui;
+package com.shrinvi.kannadaoldsongs.ui;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -12,11 +12,11 @@ import android.view.MenuItem;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.shrinvi.ssr.model.KNAUtils;
-import com.shrinvi.ssr.analytics.KNAGoogleAnalytics;
-import com.shrinvi.ssr.model.DataProvider;
-import com.shrinvi.ssr.R;
-import com.shrinvi.ssr.model.KNANewsPaperAdapter;
+import com.shrinvi.kannadaoldsongs.analytics.KNAGoogleAnalytics;
+import com.shrinvi.kannadaoldsongs.model.DataProvider;
+import com.shrinvi.kannadaoldsongs.model.KNANewsPaperAdapter;
+import com.shrinvi.kannadaoldsongs.model.KNAUtils;
+import com.shrinvi.kannadaoldsongs.R;
 
 public class KNAHomeActivity extends KNASuperActivity {
     private AlertDialog mAlertDialog;

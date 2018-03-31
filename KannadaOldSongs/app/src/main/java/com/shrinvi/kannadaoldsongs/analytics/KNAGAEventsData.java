@@ -1,4 +1,4 @@
-package com.shrinvi.ssr.analytics;
+package com.shrinvi.kannadaoldsongs.analytics;
 
 /**
  * Created by shrinvigroup on 25/03/2018.

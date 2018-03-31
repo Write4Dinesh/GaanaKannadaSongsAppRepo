@@ -1,8 +1,8 @@
-package com.shrinvi.ssr.model;
+package com.shrinvi.kannadaoldsongs.model;
 
 import android.content.Context;
 
-import com.shrinvi.ssr.R;
+import com.shrinvi.kannadaoldsongs.R;
 
 import java.util.ArrayList;
 import java.util.List;
