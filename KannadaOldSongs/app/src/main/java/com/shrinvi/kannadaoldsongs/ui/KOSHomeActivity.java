@@ -19,7 +19,6 @@ import com.shrinvi.kannadaoldsongs.model.KOSUtils;
 import com.shrinvi.kannadaoldsongs.R;
 
 public class KOSHomeActivity extends KOSSuperActivity {
-    private AlertDialog mAlertDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

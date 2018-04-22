@@ -44,8 +44,8 @@ public class KOSBrowserActivity extends KOSSuperActivity {
         if (url != null && !url.isEmpty()) {
             mKNAWebView.loadUrl(url);
         }
-        initBannerAd();
-        initInterstitialAd();
+        //initBannerAd();
+        //initInterstitialAd();
     }
 
     private void initInterstitialAd() {
@@ -67,7 +67,8 @@ public class KOSBrowserActivity extends KOSSuperActivity {
         if (mKNAWebView.canGoBack()) {
             mKNAWebView.goBack();
         } else {
-            showInterstitialAd();
+            //showInterstitialAd();
+            mKNAWebView.destroy();
         }
     }
 

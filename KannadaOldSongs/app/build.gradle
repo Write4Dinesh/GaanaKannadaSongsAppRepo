@@ -11,13 +11,13 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.shrinvi.kannadanewsapp"
+        applicationId "com.shrinvi.kannadaoldsongs"
         minSdkVersion 21
         targetSdkVersion 26
-        versionCode 2
-        versionName "1.2"
+        versionCode 1
+        versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        manifestPlaceholders = [onesignal_app_id               : "c8b009fc-5ad3-4450-bd4e-e1081d3ea541",
+        manifestPlaceholders = [onesignal_app_id               : "4aec3f1f-b7d6-4fef-be63-eae0716a82b2",
                                 // Project number pulled from dashboard, local value is ignored.
                                 onesignal_google_project_number: "REMOTE"]
     }
